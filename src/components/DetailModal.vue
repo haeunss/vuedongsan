@@ -13,7 +13,7 @@
         <button @click="Close">닫기</button>
       </div>
     </div>
-      </Transition>
+  </Transition>
 </template>
 
 <script>
@@ -48,8 +48,22 @@ export default {
           alert('최대 36개월까지 가능합니다.')
           this.total="";
         }
+        const str=" ";
+        if(a.match(str)){
+          alert('공백은 치지마')
+        }
+        if(this.total=='2'){
+        alert('누가 2개월 할부를 하래?')
+        this.total="";
+        }
       }
     },
+    // beforeUpdate(){
+    //   if(this.total=='2'){
+    //     alert('누가 2개월 할부를 하래?')
+    //     this.total="3";
+    //   }
+    // },
 }
 </script>
 
